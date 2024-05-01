@@ -22,7 +22,6 @@ grep "DPI" /var/log/Xorg.0.log
 ```
 sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
 sudo reflector --verbose --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
-
 ```
 
 ### SSH key generation for eg. GitHub or GitLab:
