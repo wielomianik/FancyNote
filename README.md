@@ -18,6 +18,13 @@ sudo pacman -Rns $(pacman -Qtdq)
 grep "DPI" /var/log/Xorg.0.log
 ```
 
+### Update pacman mirrors
+```
+sudo cp /etc/pacman.d/mirrorlist /etc/pacman.d/mirrorlist.backup
+sudo reflector --verbose --latest 20 --protocol https --sort rate --save /etc/pacman.d/mirrorlist
+
+```
+
 ### SSH key generation for eg. GitHub or GitLab:
 ```
 ssh-keygen -t rsa -b 4096 -C "example.example@gmail.com"
